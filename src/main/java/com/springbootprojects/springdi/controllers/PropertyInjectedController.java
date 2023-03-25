@@ -2,6 +2,7 @@ package com.springbootprojects.springdi.controllers;
 
 import com.springbootprojects.springdi.services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -13,6 +14,12 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class PropertyInjectedController {
 
+
+    //what happened here is as soon i added a custom name to my service class GreetingServicePropertyInjected it
+    // resulted in the below line giving error so to overcome just give qualifier the custom name give in thet service class
+    //@Qualifier("greetingServicePropertyInjected")
+
+    @Qualifier("propertyGreetingService")
     @Autowired
     GreetingService greetingService;
 

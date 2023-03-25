@@ -1,6 +1,7 @@
 package com.springbootprojects.springdi.controllers;
 
 import com.springbootprojects.springdi.services.GreetingService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 
@@ -17,7 +18,12 @@ public class ConstructorInjectedController {
 
     private final GreetingService greetingService;
 
-    public ConstructorInjectedController(GreetingService greetingService) {
+    /**
+     * what we did here is we added teh @Qualifier annotation to ensure my Junit for this class doesnt call the Primary Bean
+     * but call this GreetingServiceImpl class bean,
+     * the default way spring creates its bean is in camelcase starting with lowercase letter
+     */
+    public ConstructorInjectedController(@Qualifier("greetingServiceImpl") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 
