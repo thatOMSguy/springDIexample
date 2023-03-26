@@ -1,0 +1,2 @@
+Spring Profiles -> Profiles are way to control what beans are wired into the context and which one are not.
+Here we created one controller with name i18n which reperesents abbreviation for internationalization
