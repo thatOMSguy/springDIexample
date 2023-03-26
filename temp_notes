@@ -1,2 +1,5 @@
 Spring Profiles -> Profiles are way to control what beans are wired into the context and which one are not.
-Here we created one controller with name i18n which reperesents abbreviation for internationalization
+Here we created one controller with name i18n which reperesents abbreviation for internationalization.
+
+This is a very powerful way  to bring in features, modify, activate them within our Spring app.
+Default Profile : This profile will be active when no other profiles are ActiveProfile
